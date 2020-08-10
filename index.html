@@ -19,35 +19,27 @@
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
   </header>
-  <div class="container">
+  <div class="container time-block">
     <!-- Timeblocks go here -->
-    
+    <div class="row">
+      <div class="column left">
+        <p>
+          8am
+        </p>
+      </div>
+      <div class="column right">
+        <textarea>
+
+        </textarea>
+      </div>
+    </div>
+  
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="moment.js"></script>
-  <script>
-    moment().calendar({
-    sameDay: '[Today]',
-    nextDay: '[Tomorrow]',
-    nextWeek: 'dddd',
-    lastDay: '[Yesterday]',
-    lastWeek: '[Last] dddd',
-    sameElse: 'DD/MM/YYYY'
-});
-
-moment().calendar({
-  sameDay: function (now) {
-    if (this.isBefore(now)) {
-      return '[Will Happen Today]';
-    } else {
-      return '[Happened Today]';
-    }
-    /* ... */
-  }
-});
-  </script>
+  
 </body>
 
 </html>
