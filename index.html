@@ -17,31 +17,205 @@
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
+    <p id="currentDay" class="lead">
+      <div id="todaysdate"></div>
+      <script type="text/JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js">
+      </script>
+      <script>
+        var a = moment().format('MM/DD/YYYY');
+        document.getElementById("todaysdate").innerHTML = a;
+      </script>
+    </p>
   </header>
-  <div class="container">
-    
+  <div class="container time-block">
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          8am
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea>
+        </textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          9am
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          10am
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          11am
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          12pm
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          1pm
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          2pm
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          3pm
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          4pm
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <p>
+          5pm
+        </p>
+      </div>
+      <div class="col-md-8" id="textarea">
+        <textarea></textarea>
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-info saveBtn ">
+          <i class="fas fa-save"></i>
+        </button>
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    $(document).ready(function() {
-    var time = ("8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm")
-    for (var i = 0; i < time.length; i++)
-    var timeBlock = $("container");
-    timeBlock.addClass("time-block row");
-    timeBlock.attr("data-time", time[i]);
-    timeBlock.text(time[i]);
-    $(".time-block").append(timeBlock)
+    $(document).ready(function () {
+      
+      // var time = ("8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm")
+      // for (var i = 0; i < time.length; i++);
+      
+      //var saveBtn = $("<button>");
+      //saveBtn.addClass("saveBtn");
+      //saveBtn.attr("data-time", time[i]);
+      //saveBtn.text(time[i]);
 
+      //var input = localStorage.getItem("input")
+        
+   //  var text = $('textarea').text();
+   //  var saveBtn = $("saveBtn")
+   //JSON.stringify("textarea");
 
+   var textarea = document.querySelector("#textarea");
+   var saveBtn = document.querySelector(".saveBtn")
+    saveBtn.addEventListener("click", function(){
+      var textinput = document.querySelector("#textarea")
+      console.log(textinput);
+      window.localStorage.getItem(textinput);
     });
+
   </script>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js">
-  moment().format('MM/DD/YYYY');
-  </script>
-  
-</body>
 
+
+</body>
 </html>
+
+//json stringify --> objects convert to strings
+//json parse --> opposite
+//same event listener for every button
+//getItem doesnt change value of the data 
+// var input = JSON.stringify("textarea");
