@@ -35,11 +35,10 @@
         </p>
       </div>
       <div class="col-md-8" id="textarea">
-        <textarea>
-        </textarea>
+        <textarea input type = text></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn" value="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -184,14 +183,23 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
     $(document).ready(function () {
 
-   var textarea = document.querySelector("#textarea");
-   var saveBtn = document.querySelector(".saveBtn")
-    saveBtn.addEventListener("click", function(){
-      var textinput = document.querySelector("#textarea")
-      console.log(textinput);
-      window.localStorage.getItem(textinput);
+    var saveBtn = document.getElementById(".saveBtn");
+   saveBtn.onclick = savetext;
+
+   function savetext() {
+    var textinput = document.getElementById(".textarea");
+    localStorage.setItem(textinput, input.value);
+    var storedText = localStorage.getItem(textinput);
+    console.log(textinput);
+   };
+   
+  
+    // saveBtn.addEventListener("click", function(){
+     //  var textinput = document.getElementsById("#textarea")
+    //  console.log(textinput);
+     // window.localStorage.getItem(textinput);
     });
-    };
+    
 
   </script>
 
