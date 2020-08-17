@@ -34,11 +34,11 @@
           8am
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea input type = text></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn" id="saveBtn" value="saveBtn">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -49,11 +49,11 @@
           9am
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea  id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -64,11 +64,11 @@
           10am
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -79,11 +79,11 @@
           11am
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -94,11 +94,11 @@
           12pm
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -109,11 +109,11 @@
           1pm
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -124,11 +124,11 @@
           2pm
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -139,11 +139,11 @@
           3pm
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -154,11 +154,11 @@
           4pm
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
@@ -169,48 +169,39 @@
           5pm
         </p>
       </div>
-      <div class="col-md-8" id="textarea">
-        <textarea></textarea>
+      <div class="col-md-8">
+        <textarea id="textarea"></textarea>
       </div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn ">
+        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
           <i class="fas fa-save"></i>
         </button>
       </div>
     </div>
   </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    $(document).ready(function () {
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    var saveBtn = document.getElementById(".saveBtn");
-   saveBtn.onclick = savetext;
-
-   function savetext() {
-    var textinput = document.getElementById(".textarea");
-    localStorage.setItem(textinput, input.value);
-    var storedText = localStorage.getItem(textinput);
+  <script type="text/javascript">
+  $(document).ready(function () {
+    $("#saveBtn").on("click", function() {
+    var textinput = document.getElementById("textarea");
+    textarea = $(this).val();
+    localStorage.setItem(textinput, textarea.value);
     console.log(textinput);
-   };
-   
-  
-    // saveBtn.addEventListener("click", function(){
-     //  var textinput = document.getElementsById("#textarea")
-    //  console.log(textinput);
-     // window.localStorage.getItem(textinput);
+    var storedText = localStorage.getItem(textinput);
+    $("#saveBtn").click(function() {
+      $("textarea").show();
     });
     
+   });
+  });
 
   </script>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  
 
 
 </body>
 </html>
-
-//json stringify --> objects convert to strings
-//json parse --> opposite
-//same event listener for every button
-//getItem doesnt change value of the data 
-// var input = JSON.stringify("textarea");
