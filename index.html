@@ -30,12 +30,12 @@
   <div class="container time-block">
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="8">
           8am
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -45,12 +45,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="9">
           9am
         </p>
       </div>
       <div class="col-md-8">
-        <textarea  id="textarea"></textarea>
+        <textarea  class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -60,12 +60,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="10">
           10am
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -75,12 +75,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="11">
           11am
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -90,12 +90,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="12">
           12pm
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -105,12 +105,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="1">
           1pm
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -120,12 +120,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="2">
           2pm
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -135,12 +135,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="3">
           3pm
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -150,27 +150,12 @@
     </div>
     <div class="row">
       <div class="col-md-2">
-        <p>
+        <p id="8">
           4pm
         </p>
       </div>
       <div class="col-md-8">
-        <textarea id="textarea"></textarea>
-      </div>
-      <div class="col-md-2">
-        <button type="button" class="btn btn-info saveBtn" id="saveBtn">
-          <i class="fas fa-save"></i>
-        </button>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-2">
-        <p>
-          5pm
-        </p>
-      </div>
-      <div class="col-md-8">
-        <textarea id="textarea"></textarea>
+        <textarea class="textarea"></textarea>
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-info saveBtn" id="saveBtn">
@@ -186,17 +171,68 @@
   <script type="text/javascript">
   $(document).ready(function () {
     $("#saveBtn").on("click", function() {
-    var textinput = $("textarea#textarea").val();
-    textarea = $(this).val("#textarea");
-    localStorage.setItem(textinput, textarea.value);
+    var textinput = $("#textarea").text();
     console.log(textinput);
-    //var storedText = localStorage.getItem("textinput")
-   // $(textinput).serialize();
-   // $("textarea#textarea").show(storedText);
+    var hour = $("#8").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#9").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#10").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#11").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#12").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#1").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#2").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#3").text();
+    console.log(hour);
+  });
+    $("#saveBtn").on("click", function() {
+    var textinput = $("#textarea").text();
+    console.log(textinput);
+    var hour = $("#4").text();
+    console.log(hour);
     });
 
-    function showValue() {
-      return localStorage.getItem(textinput)
+    function showValues () {
+      localStorage.setItem("hour", textinput);
+      document.getElementById("textarea").innerHTML = localStorage.getItem("textinput");
+    }
+
+    function TOD () {
+    var todaysDate = newDate()
+    todaysDate.getHours()
     }
 
   });
