@@ -186,22 +186,22 @@
   <script type="text/javascript">
   $(document).ready(function () {
     $("#saveBtn").on("click", function() {
-    var textinput = document.getElementById("textarea");
-    textarea = $(this).val();
+    var textinput = $("textarea#textarea").val();
+    textarea = $(this).val("#textarea");
     localStorage.setItem(textinput, textarea.value);
     console.log(textinput);
-    var storedText = localStorage.getItem(textinput);
-    $("#saveBtn").click(function() {
-      $("textarea").show();
+    //var storedText = localStorage.getItem("textinput")
+   // $(textinput).serialize();
+   // $("textarea#textarea").show(storedText);
     });
-    
-   });
+
+    function showValue() {
+      return localStorage.getItem(textinput)
+    }
+
   });
 
   </script>
-
-  
-
 
 </body>
 </html>
